@@ -75,7 +75,9 @@ color: white;
     padding: 8px 15px;
     border-radius: 4px;
     transition: background-color 0.3s, color 0.3s;
+   
 }
+
 
 .nav-link:hover {
     background-color: #28A745;
