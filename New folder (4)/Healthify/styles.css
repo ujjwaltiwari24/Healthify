@@ -12,6 +12,35 @@ body {
     line-height: 1.6;
 }
 
+.navbar ul li {
+    /* Top-level items side-by-side */
+   position: relative; /* Needed for dropdown positioning */
+ }
+ 
+ .navbar ul li a {
+   display: block; /* Make links fill the list item */
+   padding: 10px 15px;
+   text-decoration: none; /* Remove underlines */
+   color: #000000; /* Example text color */
+ }
+
+ nav ul ul {
+   display: none; /* Hide dropdowns by default */
+   position: absolute; /* Position dropdowns below their parents */
+   top: 100%; /* Position right below the parent */
+   left: 0;
+   background-color: white; /* Example dropdown background */
+   box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Optional shadow */
+   min-width: 160px;
+   
+ }
+ 
+ nav li:hover > ul {
+   display: block; /* Show dropdown on hover */
+ }
+ nav ul li a:hover {
+     background-color: aliceblue;
+ }
 .navbar {
     background-color: #0077B6;
     color: white;
@@ -28,13 +57,13 @@ body {
 }
 
 .menu-icon {
-    font-size: 28px;
-    cursor: pointer;
-    display: none;
-    color: white;
+font-size: 28px;
+cursor: pointer;
+display: none;
+color: white;
 }
 
-.logo {
+.navbar .navbar-logo {
     color: white;
     font-size: 32px;
     font-weight: bold;
