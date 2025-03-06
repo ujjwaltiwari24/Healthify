@@ -48,7 +48,9 @@ body {
 .navbar .nav-link:hover {
     background-color: #065a8f;
     border-radius: 5px;
+    overflow: auto;
 }
+
 
 /* Dropdown Styles */
 .dropdown {
@@ -362,6 +364,9 @@ body {
     padding: 40px 20px;
     text-align: center;
     border-top: 2px solid #4CAF50; /* Green top border for a sleek effect */
+    border-left:2px solid #4CAF50;
+    border-bottom:2px solid #4CAF50;
+    border-right:2px solid #4CAF50;
 }
 
 .footer-links p,
