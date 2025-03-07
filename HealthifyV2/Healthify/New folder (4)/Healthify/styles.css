@@ -210,6 +210,7 @@ body {
 
 .card .box-container .box {
     width: 30rem;
+
     margin: 2rem 1rem;
     overflow: hidden;
     border-radius: 0.5rem;
@@ -258,20 +259,20 @@ body {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background: red;
-    color: white;
+    background: rgb(225, 2, 2);
+    color: rgb(251, 249, 249);
     padding: 15px;
-    font-size: 24px;
+    font-size: 12px;
     text-align: center;
     text-decoration: none;
-    border-radius: 50%;
+    border-radius: 2px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     z-index: 999;
     transition: 0.3s ease-in-out;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50px;
+    width: 100px;
     height: 50px;
 }
 
@@ -280,7 +281,7 @@ body {
 }
 
 .emergency-button:hover {
-    background: darkred;
+    background: rgb(253, 26, 26);
     transform: scale(1.1);
 }
 
