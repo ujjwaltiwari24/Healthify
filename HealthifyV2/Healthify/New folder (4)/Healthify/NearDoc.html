@@ -3,39 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'poppins',sans-serif;
-        }
-        .container{
-            width: 100vw;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-           float: inline-end;
-        }
-
-        h1{
-            color: #333;
-            margin-bottom: 60px;
-        }
-        iframe{
-            width: 80%;
-            height: 600px;
-            
-        }
-    </style>
+    <title>Find & Book Doctors</title>
+    <link rel="stylesheet" href="NearDoc.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
+
+    <!-- Back Button -->
+    <button class="back-btn" onclick="goBack()"><i class="fa-solid fa-arrow-left"></i> Back</button>
+
+    <!-- Header -->
+    <header>
+        <h1>Find & Book the Best Doctors Near You</h1>
+    </header>
+
     <div class="container">
-        <h1>Embed Location Map</h1>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30765978.00238801!2d61.00083698256397!3d19.729113061269324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30635ff06b92b791%3A0xd78c4fa1854213a6!2sIndia!5e0!3m2!1sen!2sin!4v1741230758574!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <!-- Doctors List -->
+        <section class="doctors-list">
+            <h2>Top Rated Doctors</h2>
+            <div class="doctors-grid">
+
+                <div class="doctor-card">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Dr. Rajesh Sharma">
+                    <div class="doctor-info">
+                        <h3>Dr. Rajesh Sharma</h3>
+                        <p class="specialty">Cardiologist</p>
+                        <p class="price">₹500 per consultation</p>
+                        <p class="reviews"><i class="fas fa-star"></i> 4.8 (120 Reviews)</p>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Mumbai, India</p>
+                    </div>
+                    <button class="book-btn">Book Now</button>
+                </div>
+
+                <div class="doctor-card">
+                    <img src="https://randomuser.me/api/portraits/women/42.jpg" alt="Dr. Anjali Mehta">
+                    <div class="doctor-info">
+                        <h3>Dr. Anjali Mehta</h3>
+                        <p class="specialty">Dermatologist</p>
+                        <p class="price">₹700 per consultation</p>
+                        <p class="reviews"><i class="fas fa-star"></i> 4.5 (98 Reviews)</p>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Delhi, India</p>
+                    </div>
+                    <button class="book-btn">Book Now</button>
+                </div>
+
+                <div class="doctor-card">
+                    <img src="https://randomuser.me/api/portraits/men/7.jpg" alt="Dr. Aman Verma">
+                    <div class="doctor-info">
+                        <h3>Dr. Aman Verma</h3>
+                        <p class="specialty">Orthopedic Surgeon</p>
+                        <p class="price">₹600 per consultation</p>
+                        <p class="reviews"><i class="fas fa-star"></i> 4.7 (85 Reviews)</p>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Bengaluru, India</p>
+                    </div>
+                    <button class="book-btn">Book Now</button>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Location Map -->
+        <section class="map-container">
+            <h2>Find Doctors Near You</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30765978.00238801!2d61.00083698256397!3d19.729113061269324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30635ff06b92b791%3A0xd78c4fa1854213a6!2sIndia!5e0!3m2!1sen!2sin!4v1741230758574!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
+        </section>
+
     </div>
+
+    <script>
+        function goBack() {
+            if (document.referrer) {
+                window.history.back();
+            } else {
+                window.location.href = '/'; // Default fallback URL
+            }
+        }
+    </script>
+
 </body>
 </html>

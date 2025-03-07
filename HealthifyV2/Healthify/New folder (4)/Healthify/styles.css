@@ -7,7 +7,7 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Poppins', 'Roboto', Arial, sans-serif;
     background-color: #F4F4F4;
     color: #333;
     line-height: 1.6;
@@ -255,35 +255,43 @@ body {
 }
 
 /* Emergency Button */
+/* Emergency Button */
 .emergency-button {
     position: fixed;
     bottom: 20px;
     right: 20px;
     background: rgb(225, 2, 2);
-    color: rgb(251, 249, 249);
+    color: white;
     padding: 15px;
-    font-size: 12px;
+    font-size: 14px;
     text-align: center;
     text-decoration: none;
-    border-radius: 2px;
+    border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     z-index: 999;
-    transition: 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100px;
+    width: 130px;
     height: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: 'Poppins', 'Roboto', Arial, sans-serif; /* Modern font */
+    letter-spacing: 0.5px;
 }
 
 .emergency-button i {
     color: white;
+    margin-left: 8px;
+    font-size: 18px;
 }
 
 .emergency-button:hover {
     background: rgb(253, 26, 26);
     transform: scale(1.1);
 }
+
 
 /* Footer */
 .footer {
