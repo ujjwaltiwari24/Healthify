@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ambulance Services</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .card img {
+            width: 150px;
+            height: 150px;
+            border-radius: 10px;
+            margin-right: 20px;
+        }
+        .card-content {
+            flex: 1;
+        }
+        .card-content h3 {
+            margin: 0;
+            color: #333;
+        }
+        .card-content p {
+            margin: 5px 0;
+            color: #777;
+        }
+        .book-now {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: auto;
+        }
+        .book-now:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Available Ambulance Services</h2>
+    <div id="ambulance-list"></div>
+</div>
+
+<script>
+    const ambulances = [
+        {
+            image: 'images/am1.jpg', // Replace with the actual path to am1 image
+            driver: 'Divanshu Kayshap',
+            number: '+91 1234567890',
+            address: '123 Street, City, State'
+        },
+        {
+            image: 'images/am2.jpg', // Replace with the actual path to am2 image
+            driver: 'Rahul Kumar',
+            number: '+91 9876543210',
+            address: '456 Avenue, City, State'
+        },
+        {
+            image: 'images/am3.jpg', // Replace with the actual path to am3 image
+            driver: 'Amit Sharma',
+            number: '+91 4561237890',
+            address: '789 Road, City, State'
+        }
+    ];
+
+    const ambulanceList = document.getElementById('ambulance-list');
+
+    ambulances.forEach(ambulance => {
+        const card = document.createElement('div');
+        card.className = 'card';
+        card.innerHTML = `
+            <img src="${ambulance.image}" alt="Ambulance">
+            <div class="card-content">
+                <h3>Driver: ${ambulance.driver}</h3>
+                <p><strong>Phone:</strong> ${ambulance.number}</p>
+                <p><strong>Address:</strong> ${ambulance.address}</p>
+            </div>
+            <button class="book-now">Book Now</button>
+        `;
+        ambulanceList.appendChild(card);
+    });
+</script>
+
+</body>
+</html>
