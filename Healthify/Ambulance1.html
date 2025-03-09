@@ -11,82 +11,78 @@
         * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
 
         body {
-            background-color: lightgray; /* Adjusted for better contrast */
+            background-color: lightgray;
             padding: 45px;
             display: flex;
-            flex-direction: column; /* Added to stack elements vertically */
-            align-items: center; /* Centered the content */
+            flex-direction: column;
+            align-items: center;
+            font-family: 'Poppins', sans-serif;
         }
 
         .container {
-            display: flex; /* Added flex display to align cards in a line */
-            flex-wrap: wrap; /* Allow cards to wrap to the next line if necessary */
-            justify-content: center; /* Center the cards horizontally */
-            text-align: center; /* Centered the title */
-
-
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
         }
 
         .card {
             background-color: white;
             width: 235px;
-            height: 420px;
             border-radius: 15px;
-            margin: 4px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Added shadow for depth */
-           
-
+            margin: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px;
         }
 
         .image {
+            width: 100%;
             padding: 7px;
         }
 
         .image img {
             border-radius: 15px;
-            width: 100%; /* Made image responsive */
-            height: auto; /* Maintained aspect ratio */
-            display: flex;
+            width: 100%;
+            height: auto;
         }
 
         .content {
-            padding: 5px;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        .content p {
-            font-size: 13px;
-            color: grey;
-        }
-
-        .capsules {
-            padding: 4px;
+            padding: 10px;
             text-align: center;
         }
 
-        .capsules span {
-            border: 1px solid black;
-            padding: 4px;
-            border-radius: 7px;
-            font-size: 12px;
+        .content h2 {
+            font-size: 18px;
+            color: #333;
+        }
+
+        .content p {
+            font-size: 14px;
+            color: grey;
+            margin: 5px 0;
         }
 
         .button {
             text-align: center;
+            margin-top: 10px;
         }
 
         .button button {
-            padding: 4px 13px;
+            padding: 8px 20px;
             border-radius: 15px;
             background-color: rgb(194, 244, 234);
             color: rgb(63, 63, 206);
-            font-size: 13px;
-            margin-top: 4px;
+            font-size: 14px;
             border: none;
             font-weight: bold;
+            cursor: pointer;
         }
 
         .button button:hover {
@@ -96,6 +92,7 @@
 
         h2 {
             text-align: center;
+            margin-bottom: 20px;
         }
     </style>
 </head>
@@ -137,12 +134,13 @@
                 <div class="image">
                     <img src="${ambulance.image}" alt="Ambulance">
                 </div>
-                <div class="capsules">
-                    
-                </div>
                 <div class="content">
                     <h2>Driver: ${ambulance.driver}</h2>
                     <p><strong>Phone:</strong> ${ambulance.number}</p>
+                    <p><strong>Address:</strong> ${ambulance.address}</p>
+                </div>
+                <div class="button">
+                    <button>Book Now</button>
                 </div>
             `;
             ambulanceList.appendChild(card);
