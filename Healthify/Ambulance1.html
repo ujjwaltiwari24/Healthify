@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Card Design</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Sevillana&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: lightgray; /* Adjusted for better contrast */
+            padding: 45px;
+            display: flex;
+            flex-direction: column; /* Added to stack elements vertically */
+            align-items: center; /* Centered the content */
+        }
+
+        .container {
+            display: flex; /* Added flex display to align cards in a line */
+            flex-wrap: wrap; /* Allow cards to wrap to the next line if necessary */
+            justify-content: center; /* Center the cards horizontally */
+            text-align: center; /* Centered the title */
+
+
+        }
+
+        .card {
+            background-color: white;
+            width: 235px;
+            height: 420px;
+            border-radius: 15px;
+            margin: 4px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Added shadow for depth */
+           
+
+        }
+
+        .image {
+            padding: 7px;
+        }
+
+        .image img {
+            border-radius: 15px;
+            width: 100%; /* Made image responsive */
+            height: auto; /* Maintained aspect ratio */
+            display: flex;
+        }
+
+        .content {
+            padding: 5px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .content p {
+            font-size: 13px;
+            color: grey;
+        }
+
+        .capsules {
+            padding: 4px;
+            text-align: center;
+        }
+
+        .capsules span {
+            border: 1px solid black;
+            padding: 4px;
+            border-radius: 7px;
+            font-size: 12px;
+        }
+
+        .button {
+            text-align: center;
+        }
+
+        .button button {
+            padding: 4px 13px;
+            border-radius: 15px;
+            background-color: rgb(194, 244, 234);
+            color: rgb(63, 63, 206);
+            font-size: 13px;
+            margin-top: 4px;
+            border: none;
+            font-weight: bold;
+        }
+
+        .button button:hover {
+            background-color: aqua;
+            color: green;
+        }
+
+        h2 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Available Ambulance Services</h2>
+        <div id="ambulance-list"></div>
+    </div>
+
+    <script>
+        const ambulances = [
+            {
+                image: "am1.jpg",
+                driver: "Divanshu Kayshap",
+                number: "+91 1234567890",
+                address: "123 Street, City, State"
+            },
+            {
+                image: "am2.jpg",
+                driver: "John Doe",
+                number: "+91 9876543210",
+                address: "456 Avenue, City, State"
+            },
+            {
+                image: "am3.jpg",
+                driver: "Jane Smith",
+                number: "+91 1122334455",
+                address: "789 Boulevard, City, State"
+            }
+        ];
+
+        const ambulanceList = document.getElementById('ambulance-list');
+
+        ambulances.forEach(ambulance => {
+            const card = document.createElement('div');
+            card.className = 'card';
+            card.innerHTML = `
+                <div class="image">
+                    <img src="${ambulance.image}" alt="Ambulance">
+                </div>
+                <div class="capsules">
+                    
+                </div>
+                <div class="content">
+                    <h2>Driver: ${ambulance.driver}</h2>
+                    <p><strong>Phone:</strong> ${ambulance.number}</p>
+                </div>
+            `;
+            ambulanceList.appendChild(card);
+        });
+    </script>
+</body>
+
+</html>
