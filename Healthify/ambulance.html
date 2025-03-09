@@ -1,109 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ambulance Services</title>
+    <title>CSS Card Design</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Sevillana&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 20px;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .card {
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            margin: 20px 0;
-            padding: 20px;
+            background-color: lightgray;
+            padding: 45px;
             display: flex;
+            flex-direction: column;
             align-items: center;
+            font-family: 'Poppins', sans-serif;
         }
-        .card img {
-            width: 150px;
-            height: 150px;
-            border-radius: 10px;
-            margin-right: 20px;
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
         }
-        .card-content {
-            flex: 1;
+
+        #ambulance-list {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
         }
-        .card-content h3 {
-            margin: 0;
+
+        .card {
+            background-color: white;
+            width: 235px;
+            border-radius: 15px;
+            margin: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px;
+            justify-content: space-between;
+        }
+
+        .image {
+            width: 100%;
+            padding: 7px;
+        }
+
+        .image img {
+            border-radius: 15px;
+            width: 100%;
+            height: auto;
+            display: flex;
+
+        }
+
+        .content {
+            padding: 10px;
+            text-align: center;
+        }
+
+        .content h2 {
+            font-size: 18px;
             color: #333;
         }
-        .card-content p {
+
+        .content p {
+            font-size: 14px;
+            color: grey;
             margin: 5px 0;
-            color: #777;
         }
-        .book-now {
-            background-color: #28a745;
-            color: white;
+
+        .button {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .button button {
+            padding: 8px 20px;
+            border-radius: 15px;
+            background-color: rgb(194, 244, 234);
+            color: rgb(63, 63, 206);
+            font-size: 14px;
             border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
+            font-weight: bold;
             cursor: pointer;
-            margin-left: auto;
         }
-        .book-now:hover {
-            background-color: #218838;
+
+        .button button:hover {
+            background-color: rgb(254, 76, 49);
+            color: green;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
         }
     </style>
 </head>
+
 <body>
+    <div class="container">
+        <h2>Available Ambulance Services</h2>
+        <div id="ambulance-list"></div>
+    </div>
 
-<div class="container">
-    <h2>Available Ambulance Services</h2>
-    <div id="ambulance-list"></div>
-</div>
-<div class="image">
-    <img src="am1.jpg" width="188" alt="">
-</div>
+    <script>
+        const ambulances = [
+            {
+                image: "am1.jpg",
+                driver: "Divanshu Kayshap",
+                number: "+91 1234567890",
+                address: "123 Street, City, State"
+            },
+            {
+                image: "am2.jpg",
+                driver: "John Doe",
+                number: "+91 9876543210",
+                address: "456 Avenue, City, State"
+            },
+            {
+                image: "am3.jpg",
+                driver: "Jane Smith",
+                number: "+91 1122334455",
+                address: "789 Boulevard, City, State"
+            }
+        ];
 
-<script>
-    const ambulances = [
-        {
-            image: 'images/am1.jpg', // Replace with the actual path to am1 image
-            driver: 'Divanshu Kayshap',
-            number: '+91 1234567890',
-            address: '123 Street, City, State'
-        },
-        {
-            image: 'images/am2.jpg', // Replace with the actual path to am2 image
-            driver: 'Rahul Kumar',
-            number: '+91 9876543210',
-            address: '456 Avenue, City, State'
-        },
-        {
-            image: 'images/am3.jpg', // Replace with the actual path to am3 image
-            driver: 'Amit Sharma',
-            number: '+91 4561237890',
-            address: '789 Road, City, State'
-        }
-    ];
+        const ambulanceList = document.getElementById('ambulance-list');
 
-    const ambulanceList = document.getElementById('ambulance-list');
-
-    ambulances.forEach(ambulance => {
-        const card = document.createElement('div');
-        card.className = 'card';
-        card.innerHTML = `
-            <img src="${ambulance.image}" alt="Ambulance">
-            <div class="card-content">
-                <h3>Driver: ${ambulance.driver}</h3>
-                <p><strong>Phone:</strong> ${ambulance.number}</p>
-                <p><strong>Address:</strong> ${ambulance.address}</p>
-            </div>
-            <button class="book-now">Book Now</button>
-        `;
-        ambulanceList.appendChild(card);
-    });
-</script>
-
+        ambulances.forEach(ambulance => {
+            const card = document.createElement('div');
+            card.className = 'card';
+            card.innerHTML = `
+                <div class="image">
+                    <img src="${ambulance.image}" alt="Ambulance">
+                </div>
+                <div class="content">
+                    <h2>Driver: ${ambulance.driver}</h2>
+                    <p><strong>Phone:</strong> ${ambulance.number}</p>
+                    <p><strong>Address:</strong> ${ambulance.address}</p>
+                </div>
+                <div class="button">
+                    <button>Book Now</button>
+                </div>
+            `;
+            ambulanceList.appendChild(card);
+        });
+    </script>
 </body>
+
 </html>
