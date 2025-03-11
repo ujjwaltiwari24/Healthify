@@ -7,7 +7,7 @@
 }
 
 body {
-    background-image: url("/Healthify/HealthifyV2/Healthify/New folder (4)/Healthify/symptomsbackground.jpg");
+    background-image: url("symptomsbackground.jpg");
     background-size:auto;
     background-repeat: no-repeat;
     background-position: center; 
