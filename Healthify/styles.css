@@ -89,6 +89,15 @@ body {
     background-color: #0653aa;
 }
 
+.dropdown-content {
+    max-height: 200px; /* Default max height for other dropdowns */
+    overflow-y: auto; /* Add scroll if content exceeds max height */
+}
+
+.navbar .dropdown:nth-child(3) .dropdown-content {
+    max-height: 400px; /* Increase max height for the doctors dropdown */
+}
+
 /* Mobile Navbar Styles */
 .menu-icon {
     display: none;
@@ -525,4 +534,13 @@ body {
   button:hover {
     background-color: rgba(0, 0, 0, 0.8);
   }
-  
+
+.options-container iframe {
+    width: 90%; /* Make the map take 90% of the container's width */
+    height: 600px; /* Increase the height of the map */
+    border: 0; /* Remove border */
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    margin: 20px auto; /* Center the map and add space above */
+    display: block; /* Ensure the iframe is treated as a block element */
+}
