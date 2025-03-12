@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Medical Situations</title>
+    <link rel="stylesheet" href="firstaid.css">
+</head>
+<body>
+
+<header>
+    <nav>
+        <ul>
+            <li><a href="#top-ten-emergencies">Top Emergencies</a></li>
+            <li>
+                <form id="search-form">
+                    <input type="search" id="search-input" placeholder="Search for emergency">
+                    <button type="submit">Search</button>
+                </form>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section id="hero">
+        <div>
+            <h1>Emergency Medical Situations</h1>
+            <p>Know what to do in critical situations</p>
+        </div>
+    </section>
+
+    <section id="top-ten-emergencies">
+        <div class="emergency">
+            <img src="https://images.unsplash.com/photo-1519494080410-f9aa76cb4283" alt="Heart Attack">
+            <h3>Heart Attack</h3>
+            <p>Call emergency services immediately if experiencing severe chest pain.</p>
+        </div>
+
+        <div class="emergency">
+            <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef" alt="Stroke">
+            <h3>Stroke</h3>
+            <p>Seek medical help immediately if there is slurred speech or facial drooping.</p>
+        </div>
+
+        <div class="emergency">
+            <img src="https://media.istockphoto.com/id/1216996999/photo/woman-suffering-an-anxiety.jpg?s=1024x1024&w=is&k=20&c=jO_EeqDdSA7ZjN35YmBIaItx-oBtI1LM-0O85fwewDg=" alt="Choking">
+            <h3>Choking</h3>
+            <p>Perform the Heimlich maneuver if someone is choking and cannot breathe.</p>
+        </div>
+
+        <div class="emergency">
+            <img src="burns.jpg" alt="Burns">
+            <h3>Burns</h3>
+            <p>Cool the burn under running water for 10-15 minutes and cover with a sterile dressing.</p>
+        </div>
+
+        <div class="emergency">
+            <img src="https://media.istockphoto.com/id/1231848514/photo/springtime-allergy-woman-sneezing-on-the-city-street.jpg?s=1024x1024&w=is&k=20&c=yi8s-vpmGukpLoqnU_1xMLUhISukHfvS2w7Qf34-hC4=" alt="Allergic Reaction">
+            <h3>Allergic Reaction</h3>
+            <p>Administer epinephrine (if available) and seek emergency help.</p>
+        </div>
+
+        <div class="emergency">
+            <img src="https://media.istockphoto.com/id/697485606/photo/asian-woman-using-a-pressurized-cartridge-inhaler-extended-pharynx-bronchodilator.jpg?s=1024x1024&w=is&k=20&c=XvbLtIQ4LTPUjXgBoxAksRcuozllgfB__bN9DHaODoM=" alt="Asthma Attack">
+            <h3>Asthma Attack</h3>
+            <p>Use an inhaler and seek medical help if breathing does not improve.</p>
+        </div>
+
+        <div class="emergency">
+            <img src="https://media.istockphoto.com/id/1366196062/photo/blurred-photo-of-woman-suffering-from-vertigo-or-dizziness-or-other-health-problem-of-brain.jpg?s=1024x1024&w=is&k=20&c=NEjMasp6fw4PEW-YokbGn57XkE3BLMpLWFRy1g2rgmI=" alt="Seizure">
+            <h3>Seizure</h3>
+            <p>Keep the person safe, avoid restraining them, and call emergency services.</p>
+        </div>
+
+        <div class="emergency">
+            <img src="https://media.istockphoto.com/id/1271666425/photo/lumbar-vertebrae-x-ray.jpg?s=1024x1024&w=is&k=20&c=kl909wS8oHhxv9AYy-UlNRMBAgiJtRyIFt9t8sbFjK8=" alt="Spinal Injury">
+            <h3>Spinal Injury</h3>
+            <p>Do not move the person; keep them still and call emergency services.</p>
+        </div>
+
+        <div class="emergency">
+            <img src="https://media.istockphoto.com/id/1325895908/photo/asian-woman-drying-sweat-in-a-warm-summer-day.jpg?s=1024x1024&w=is&k=20&c=tSGtyuisfaCEzumKzlH39YQUR-uwo2LcuL0rBxoFhyI=" alt="Heat Stroke">
+            <h3>Heat Stroke</h3>
+            <p>Move the person to a cool place, hydrate them, and seek medical attention.</p>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 Healthify</p>
+</footer>
+
+<script>
+    document.getElementById("search-form").addEventListener("submit", function(event) {
+        event.preventDefault();
+        var searchQuery = document.getElementById("search-input").value.toLowerCase();
+        var emergencies = document.querySelectorAll(".emergency");
+
+        emergencies.forEach(function(item) {
+            var title = item.querySelector("h3").textContent.toLowerCase();
+            if (title.includes(searchQuery)) {
+                item.style.display = "block";
+            } else {
+                item.style.display = "none";
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
