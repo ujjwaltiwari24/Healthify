@@ -1,9 +1,14 @@
-/* Global styles */
+
 * {
+
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-align: center;
+}
+
+.div{
+  background-color: #030434;
 }
 
 body {
@@ -137,7 +142,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 100px 50px 50px;
-    background-color: #030434;;
+    background-color: #030434;
     color: rgb(255, 255, 255);
     height: 440px;
 }
@@ -326,7 +331,7 @@ body {
 
 /* Footer */
 .footer {
-    background-color: #0077B6;
+    background-color: #030434;
     color: white;
     text-align: center;
     padding: 20px;
@@ -400,10 +405,10 @@ body {
   .footer-terms {
     font-size: 16px;
     color: #f4f4f4;
-    background-color: #0049c6;
+    background-color: #030434;
     padding: 40px 20px;
     text-align: center;
-    border-top: 2px solid #4CAF50; /* Green top border for a sleek effect */
+    border-top: 2px solid #4CAF50; 
     border-left:2px solid #4CAF50;
     border-bottom:2px solid #4CAF50;
     border-right:2px solid #4CAF50;
@@ -424,8 +429,8 @@ body {
 
 .footer-links a:hover,
 .footer-social a:hover {
-    color: #4CAF50; /* Green on hover for links */
-    transform: scale(1.1); /* Slight zoom effect on hover */
+    color: #4CAF50; 
+    transform: scale(1.1); 
 }
 
 .footer-social {
@@ -559,9 +564,9 @@ body {
   }
 
 .options-container iframe {
-    width: 90%; /* Make the map take 90% of the container's width */
-    height: 600px; /* Increase the height of the map */
-    border: 0; /* Remove border */
+    width: 90%; 
+    height: 600px; 
+    border: 0;
     border-radius: 10px; /* Add rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
     margin: 20px auto; /* Center the map and add space above */
@@ -680,11 +685,9 @@ body {
 
   /*Feature seaction*/
 
-
-  /* Feature Section - Full Width & Proper Layout */
 .feature-sec-one {
   display: flex;
-  align-items: center;  /* Centers items properly */
+  align-items: center;
   justify-content: space-between;
   background-color: #030434;
   color: white;
@@ -695,15 +698,15 @@ body {
   margin: 0 auto;
   gap: 30px;
   flex-wrap: wrap;
-  perspective: 1000px; /* 3D depth effect */
+  perspective: 100px;
 }
 
-/* Text Section - Now Ensures Button is Below */
+
 .feature-sec-one-content {
   flex: 1;
   max-width: 50%;
   display: flex;  
-  flex-direction: column;  /* Forces button to stay below */
+  flex-direction: column;  
   justify-content: center;  
   gap: 20px;  /* Adds spacing between text & button */
   padding: 20px;
@@ -760,7 +763,7 @@ body {
   }
   .feature-sec-one-content {
     max-width: 90%;
-    align-items: center; /* Centering content on smaller screens */
+    align-items: center; 
     text-align: center;
   }
   .feature-sec-one-image {
@@ -768,6 +771,64 @@ body {
     margin-top: 20px;
   }
   .feature-sec-one-button {
-    align-self: center; /* Centers button in mobile */
+    align-self: center;
   }
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateX(-100px); /* Start with the content off-screen to the left */
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.show {
+  opacity: 1;
+  transform: translateX(0); 
+}
+
+
+.content-container {
+  background-color: #030434; 
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  justify-content: space-between;
+  padding: 20px; 
+  
+}
+
+/* Style for the image */
+.content-image-container {
+  width: 45%; /* Adjust width of image */
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.content-image {
+  padding-bottom: 35px;
+  width: 100%; /* Set the image width to 100% */
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* Style for the text */
+.content-text {
+  flex: 1;
+  padding-left: 20px;
+}
+
+/* Heading style */
+.content-text h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+/* Paragraph style */
+.content-text p {
+  font-size: 16px;
+  color: #ffffff;
+  margin-bottom: 15px;
 }

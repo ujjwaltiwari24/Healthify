@@ -26,20 +26,21 @@ function moveSlide(direction) {
 
 
 /*Feature image*/
+
 document.addEventListener("DOMContentLoaded", function () {
   const elements = document.querySelectorAll(".hidden");
 
+  // This function ensures elements stay visible once they appear
   function checkScroll() {
-      elements.forEach((element) => {
-          const position = element.getBoundingClientRect().top;
-          const windowHeight = window.innerHeight;
+    elements.forEach((element) => {
+      const position = element.getBoundingClientRect().top;
+      const windowHeight = window.innerHeight;
 
-          if (position < windowHeight - 100 && position > 50) {
-              element.classList.add("show");
-          } else {
-              element.classList.remove("show");
-          }
-      });
+      // If the element is in the viewport, add the 'show' class
+      if (position < windowHeight - 100 && position > 50) {
+        element.classList.add("show");
+      }
+    });
   }
 
   // Check scroll position immediately after DOM content is loaded
