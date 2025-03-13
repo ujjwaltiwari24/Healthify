@@ -64,7 +64,7 @@ body {
 .dropdown .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #0051ff;
+    background-color: #1f00cc;
     min-width: 160px;
     top: 100%;
     left: 0;
@@ -137,9 +137,9 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 100px 50px 50px;
-    background-color: #0077B6;
-    color: white;
-    height: 250px;
+    background-color: #052d64;
+    color: rgb(255, 255, 255);
+    height: 440px;
 }
 
 .hero-text {
@@ -513,6 +513,7 @@ body {
 
 
 .banner-container {
+  padding-top: 40px;
     position: relative;
     width: 100%;
     max-width: 1920px;

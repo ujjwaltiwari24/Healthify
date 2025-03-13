@@ -8,6 +8,7 @@
     <script defer src="scripts.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
     <title>Healthify - Your Health Buddy</title>
 </head>
@@ -56,7 +57,6 @@
             <div class="dropdown">
                 <a href="#academic&achievements" class="nav-link">Academic & Achievements</a>
                 <div class="dropdown-content">
-            <!-- <a href="#academic&achievements" class="nav-link">Academic&Achievements</a> -->
             <a href="#">Hospital Achievements</a>
             <a href="#">News & Impact</a>
             <a href="#">Highlights</a>
@@ -69,13 +69,16 @@
     <header class="hero-section">
         <div class="hero-text">
             <h1>Welcome to Healthify</h1>
-            <p>Your personal health assistant at your fingertips. Connect with doctors online and offline!</p>
+            <p>Your personal health assistant at your fingertips! Instantly connect with trusted doctors for online consultations or book in-person appointments with ease. Quality healthcare, anytime, anywhere!</p>
             <a href="#features" class="cta-button">Get Started</a>
         </div>
-        <div class="hero-image">
-            <img src="img1.png" alt="Health Assistant" height="70%" width="70%"/>
-        </div>
+        <video width="600" height="400" autoplay muted loop playsinline>
+          <source src="video1.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+      </video>
+      
     </header>
+    
     <div class="banner-container">
         <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
         <div class="banner-slide">
@@ -86,27 +89,7 @@
         <button class="next" onclick="moveSlide(1)">&#10095;</button>
       </div>
       
-      <h1 class="top-doc">Our Top Rated Doctors</h1>
-      
-      <a href="https://www.mythrillfiction.com/the-dark-rider" alt="Mythrill" target="_blank">
-        <div class="card">
-          <div class="wrapper">
-            <img src="card1.png" class="cover-image" />
-          </div>
-          <img src="CARDTITLE1.png" class="title" />
-          <img src="card1.png" class="character" />
-        </div>
-      </a>
-      
-      <a href="https://www.mythrillfiction.com/force-mage" alt="Mythrill" target="_blank">
-        <div class="card">
-          <div class="wrapper">
-            <img src="card2.png" class="cover-image" />
-          </div>
-          <img src="CARDTITLE1.png" class="title" />
-          <img src="card2.png" class="character" />
-        </div>
-      </a>
+     
       <section id="features" class="features">
         <div class="container">
           <div class="section-title">
@@ -120,6 +103,7 @@
                 <h3>Online Consultations</h3>
                 <p>Consult with expert doctors from the comfort of your home via video calls.</p>
               </div>
+              
             </div>
             <div class="col-lg-3 col-md-6">
               <div class="feature-item">
@@ -144,7 +128,7 @@
             </div>
           </div>
         </div>
-      </section>
+    </section>
 
     <div class="options-container">
         <a href="#" class="option-button ambulance-button">
@@ -198,14 +182,19 @@
                         <p><a href="privacy">Privacy Policy</a></p>
                         <p><a href="#tnc">Terms and Conditions</a></p>
                     </div>
-                    <script src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
-                    <script>
-                        function loadGoogleTranslate()
-                        {
-                            new google.translate.TranslateElement("myid")
-                        }
-                    </script>
-                    <div id="myid">Choose Language</div>
+                    
+                        <script>
+                            function loadGoogleTranslate() {
+                                new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+                            }
+                        </script>
+                    
+                        <!-- Google Translate Dropdown -->
+                        <div id="google_translate_element"></div>
+                    
+                        <!-- Load Google Translate API -->
+                        <script src="https://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+                    
                     
                     <div class="footer-social">
                         <p>Follow us:</p>
@@ -225,6 +214,7 @@
                 </div>
                 
     </footer>
-
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 </body>
 </html>
