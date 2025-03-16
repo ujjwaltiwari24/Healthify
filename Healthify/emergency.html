@@ -6,8 +6,18 @@
     <link rel="stylesheet" href="emergency.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-
     <title>Emergency</title>
+    <style>
+        .message {
+            display: none;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
 
@@ -22,11 +32,25 @@
             </a>
 
             <!-- Get Admitted Button -->
-            <a href="Ambulance1.html" class="btn get-admitted">
+            <a href="Ambulance1.html" class="btn get-admitted" id="get-admitted-btn">
                 <i class="fas fa-hospital"></i> Get Admitted
             </a>
         </div>
+
+        <div class="message" id="message">
+            You will be connected to the nearest hospital or nursing home.
+        </div>
     </div>
+
+    <script>
+        document.getElementById('get-admitted-btn').addEventListener('click', function(event) {
+            event.preventDefault();
+            document.getElementById('message').style.display = 'block';
+            setTimeout(function() {
+                window.location.href = 'Ambulance1.html';
+            }, 3000); // Redirect after 3 seconds
+        });
+    </script>
 
 </body>
 </html>
